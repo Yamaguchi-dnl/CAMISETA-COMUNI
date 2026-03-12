@@ -1,0 +1,245 @@
+/* ============================================
+   RESPONSIVE — IAP Camisetas
+   ============================================ */
+
+/* =========================================
+   TABLET  768px – 1024px
+   ========================================= */
+@media (max-width: 1024px) {
+
+  /* Navbar */
+  .navbar__nav,
+  .navbar__cta {
+    display: none;
+  }
+
+  .navbar__hamburger {
+    display: flex;
+  }
+
+  /* Hero */
+  .hero__main {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+  }
+
+  .hero__content {
+    padding: var(--space-8) var(--gutter) var(--space-5);
+    max-width: 100%;
+  }
+
+  .hero__image-col {
+    min-height: 460px;
+  }
+
+  /* Propósito */
+  .proposito__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  .proposito__images {
+    height: 420px;
+  }
+
+  .proposito__content {
+    padding-left: 0;
+  }
+
+  /* Ofertas */
+  .ofertas__grid {
+    max-width: 560px;
+  }
+
+  /* Footer */
+  .footer__divider {
+    display: none;
+  }
+}
+
+/* =========================================
+   MOBILE  < 768px
+   ========================================= */
+@media (max-width: 767px) {
+
+  :root {
+    --navbar-height: 60px;
+  }
+
+  /* ---- Hero ---- */
+  .hero__main {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .hero__content {
+    padding: var(--space-5) var(--gutter) var(--space-4);
+    order: 1;
+  }
+
+  .hero__image-col {
+    min-height: 320px;
+    order: 2;
+  }
+
+  .hero__actions {
+    flex-direction: column;
+  }
+
+  .hero__actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero__overlay-word span {
+    font-size: clamp(52px, 18vw, 96px);
+  }
+
+  .hero__info-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-1);
+  }
+
+  /* ---- Gallery ---- */
+  .gallery__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+  }
+
+  /* Resetar tamanhos mosaico no mobile — grade uniforme */
+  .gallery__item {
+    grid-column: span 1 !important;
+    grid-row: span 1 !important;
+    aspect-ratio: 1 / 1 !important;
+  }
+
+  /* ---- Propósito ---- */
+  .proposito {
+    padding: var(--space-10) 0;
+  }
+
+  .proposito__images {
+    height: 340px;
+  }
+
+  .proposito__deco {
+    width: 36px;
+    height: 36px;
+  }
+
+  /* ---- Ofertas ---- */
+  .ofertas {
+    padding: var(--space-10) 0;
+  }
+
+  .ofertas__grid {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+  }
+
+  /* Card destaque primeiro */
+  .product-card--featured {
+    order: -1;
+  }
+
+  /* ---- Formulário ---- */
+  .formulario {
+    padding: var(--space-10) 0;
+  }
+
+  .formulario__row {
+    grid-template-columns: 1fr;
+  }
+
+  .formulario__header,
+  .formulario__body {
+    padding-inline: var(--space-4);
+  }
+
+  .formulario__header {
+    padding-top: var(--space-5);
+    padding-bottom: var(--space-4);
+  }
+
+  .radio-group {
+    flex-direction: column;
+  }
+
+  .radio-option {
+    min-width: unset;
+    flex: unset;
+  }
+
+  /* ---- FAQ ---- */
+  .faq {
+    padding: var(--space-10) 0;
+  }
+
+  /* ---- Footer ---- */
+  .footer__inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-3);
+  }
+
+  .footer__copy {
+    text-align: left;
+  }
+
+  .footer__divider {
+    display: none;
+  }
+
+  /* ---- Section headers ---- */
+  .section-header {
+    margin-bottom: var(--space-6);
+  }
+
+  /* ---- Propósito grid mobile ---- */
+  .proposito__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================
+   EXTRA PEQUENO  < 400px
+   ========================================= */
+@media (max-width: 400px) {
+  .hero__image-col {
+    min-height: 260px;
+  }
+
+  .proposito__images {
+    height: 280px;
+  }
+}
+
+/* =========================================
+   LARGE DESKTOP  > 1400px
+   ========================================= */
+@media (min-width: 1400px) {
+  :root {
+    --gutter: 64px;
+  }
+}
+
+/* =========================================
+   PREFERÊNCIA: MOVIMENTO REDUZIDO
+   ========================================= */
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .marquee-strip__inner {
+    animation: none;
+  }
+
+  * {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0A0A0A" />
+
+  <!-- SEO -->
+  <title>IAP Camisetas — Ministério de Comunicação | Barreirinha</title>
+  <meta name="description" content="Camisetas do Ministério de Comunicação da IAP Barreirinha. Comunicar é missão. Reserve a sua por R$ 74,90 no Pix." />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="IAP Camisetas — Ministério de Comunicação" />
+  <meta property="og:description" content="Comunicar é missão. Reserve sua camiseta por R$ 74,90 no Pix." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/images/20260307_180506.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
+
+  <!-- Google Fonts: Bebas Neue + Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/variables.css" />
+  <link rel="stylesheet" href="styles/reset.css" />
+  <link rel="stylesheet" href="styles/components.css" />
+  <link rel="stylesheet" href="styles/sections.css" />
+  <link rel="stylesheet" href="styles/responsive.css" />
+
+  <!-- Critical inline CSS: evita FOUC na navbar -->
+  <style>
+    body { background-color: #F7F4EF; }
+    .navbar { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; }
+  </style>
+</head>
+
+<body>
+
+  <!-- ============================================================
+       INTRO OVERLAY
+       ============================================================ -->
+  <div id="intro-overlay" role="presentation" aria-hidden="true">
+    <div class="intro-inner">
+
+      <!-- Linha vermelha -->
+      <div class="intro-line-wrap">
+        <div id="intro-line"></div>
+      </div>
+
+      <!-- Textos -->
+      <div class="intro-text">
+        <div class="intro-word-wrap">
+          <span id="intro-small">IDE POR TODO O</span>
+        </div>
+        <div class="intro-word-wrap">
+          <span id="intro-large">MUNDO</span>
+        </div>
+      </div>
+
+      <!-- Versículo -->
+      <div class="intro-word-wrap intro-ref-wrap">
+        <span id="intro-ref">Marcos 16:15</span>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ============================================================
+       NAVBAR
+       ============================================================ -->
+  <header id="navbar" class="navbar" role="banner">
+    <div class="navbar__inner">
+
+      <!-- Logo -->
+      <a href="#inicio" class="navbar__logo" aria-label="IAP Camisetas — Início">
+        <span class="navbar__logo-main">IAP Camisetas</span>
+        <span class="navbar__logo-sub">Ministério de Comunicação</span>
+      </a>
+
+      <!-- Nav desktop -->
+      <nav class="navbar__nav" aria-label="Navegação principal">
+        <a href="#inicio"   class="navbar__link">Início</a>
+        <a href="#proposito" class="navbar__link">Propósito</a>
+        <a href="#ofertas"  class="navbar__link">Ofertas</a>
+        <a href="#faq"      class="navbar__link">Dúvidas</a>
+      </nav>
+
+      <!-- CTA desktop -->
+      <a href="#reserva" class="btn btn--primary navbar__cta" aria-label="Reservar camiseta">
+        Reservar
+      </a>
+
+      <!-- Hamburger mobile -->
+      <button
+        id="hamburgerBtn"
+        class="navbar__hamburger"
+        aria-label="Abrir menu"
+        aria-expanded="false"
+        aria-controls="mobileMenu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <!-- Menu mobile -->
+    <nav id="mobileMenu" class="navbar__mobile-menu" aria-label="Menu mobile">
+      <a href="#inicio"    class="navbar__mobile-link">Início</a>
+      <a href="#proposito" class="navbar__mobile-link">Propósito</a>
+      <a href="#ofertas"   class="navbar__mobile-link">Ofertas</a>
+      <a href="#reserva"   class="navbar__mobile-link">Reservar</a>
+      <a href="#faq"       class="navbar__mobile-link">Dúvidas</a>
+    </nav>
+  </header>
+
+
+  <main>
+
+    <!-- ============================================================
+         HERO
+         ============================================================ -->
+    <section id="inicio" class="hero" aria-label="Destaque principal">
+
+      <div class="hero__main">
+
+        <!-- Texto -->
+        <div class="hero__content reveal">
+          <div class="hero__eyebrow">
+            <span class="hero__eyebrow-line" aria-hidden="true"></span>
+            <span class="hero__eyebrow-text">Ministério de Comunicação · IAP Barreirinha</span>
+          </div>
+
+          <h1 class="hero__headline">
+            <span class="hero__headline-line"><span class="hero__headline-word">COMUNICAR</span></span>
+            <span class="hero__headline-line"><span class="hero__headline-word">É MISSÃO.</span></span>
+          </h1>
+
+          <p class="hero__subheadline">
+            Uma camiseta para quem serve anunciando a mensagem.<br>
+            Use, represente, impacte.
+          </p>
+
+          <div class="hero__actions">
+            <a href="#ofertas" class="btn btn--primary btn--lg">
+              Ver camisetas
+            </a>
+            <a href="#proposito" class="btn btn--secondary btn--lg">
+              Nosso propósito
+            </a>
+          </div>
+        </div>
+
+        <!-- Imagem -->
+        <div class="hero__image-col reveal reveal-delay-2">
+          <img
+            src="assets/images/20260307_180506.jpg"
+            alt="Equipe do Ministério de Comunicação da IAP usando as camisetas preta e off-white"
+            loading="eager"
+            fetchpriority="high"
+          />
+          <div class="hero__image-tag" aria-hidden="true">R$ 74,90 no Pix</div>
+        </div>
+
+      </div>
+
+      <!-- Palavra overlay -->
+      <div class="hero__overlay-word" aria-hidden="true">
+        <span>CREATIVITY</span>
+      </div>
+
+      <!-- Barra info -->
+      <div class="hero__info-bar" aria-label="Informações rápidas">
+        <span class="hero__info-item">
+          <strong>Pix:</strong> R$ 74,90
+        </span>
+        <span class="hero__info-item">
+          <strong>Cartão:</strong> R$ 79,90 até 3x s/ juros
+        </span>
+        <span class="hero__info-item">
+          <strong>Kit 2 peças:</strong> R$ 139,90 no Pix
+        </span>
+        <span class="hero__info-item">
+          <strong>Entrega:</strong> Combinada via WhatsApp
+        </span>
+      </div>
+
+    </section>
+
+
+    <!-- ============================================================
+         FAIXA MARQUEE
+         ============================================================ -->
+    <div class="marquee-strip" aria-hidden="true">
+      <div class="marquee-strip__inner">
+        <!-- duplicado para loop infinito -->
+        <span class="marquee-strip__item">Comunicar é Missão</span>
+        <span class="marquee-strip__item marquee-strip__dot">·</span>
+        <span class="marquee-strip__item">IAP Barreirinha</span>
+        <span class="marquee-strip__item marquee-strip__dot">·</span>
+        <span class="marquee-strip__item">Ministério de Comunicação</span>
+        <span class="marquee-strip__item marquee-strip__dot">·</span>
+        <span class="marquee-strip__item">Gospel Streetwear</span>
+        <span class="marquee-strip__item marquee-strip__dot">·</span>
+        <span class="marquee-strip__item">Reserve a Sua</span>
+        <span class="marquee-strip__item marquee-strip__dot">·</span>
+        <span class="marquee-strip__item">R$ 74,90 no Pix</span>
+        <span class="marquee-strip__item marquee-strip__dot">·</span>
+        <!-- duplicata para seamless -->
+        <span class="marquee-strip__item">Comunicar é Missão</span>
+        <span class="marquee-strip__item marquee-strip__dot">·</span>
+        <span class="marquee-strip__item">IAP Barreirinha</span>
+        <span class="marquee-strip__item marquee-strip__dot">·</span>
+        <span class="marquee-strip__item">Ministério de Comunicação</span>
+        <span class="marquee-strip__item marquee-strip__dot">·</span>
+        <span class="marquee-strip__item">Gospel Streetwear</span>
+        <span class="marquee-strip__item marquee-strip__dot">·</span>
+        <span class="marquee-strip__item">Reserve a Sua</span>
+        <span class="marquee-strip__item marquee-strip__dot">·</span>
+        <span class="marquee-strip__item">R$ 74,90 no Pix</span>
+        <span class="marquee-strip__item marquee-strip__dot">·</span>
+      </div>
+    </div>
+
+
+    <!-- ============================================================
+         GALERIA MOSAICO
+         ============================================================ -->
+    <section class="gallery" aria-label="Galeria de fotos da campanha">
+      <div class="gallery__grid">
+
+        <!-- Célula grande 2×2 -->
+        <div class="gallery__item reveal">
+          <img src="assets/images/20260307_180553.jpg" alt="Grupo de quatro membros do Ministério mostrando as costas das camisetas" loading="lazy" />
+        </div>
+
+        <div class="gallery__item reveal reveal-delay-1">
+          <img src="assets/images/20260307_181051(0).jpg" alt="Membro do Ministério sorrindo com a camiseta preta" loading="lazy" />
+        </div>
+
+        <div class="gallery__item reveal reveal-delay-2">
+          <img src="assets/images/20260307_180740.jpg" alt="Membro sentado usando a camiseta off-white" loading="lazy" />
+        </div>
+
+        <!-- Célula wide 2×1 -->
+        <div class="gallery__item reveal reveal-delay-1">
+          <img src="assets/images/20260307_180559.jpg" alt="Quatro membros do Ministério de costas exibindo a estampa IDE POR TODO O MUNDO" loading="lazy" />
+        </div>
+
+        <div class="gallery__item reveal reveal-delay-2">
+          <img src="assets/images/20260307_180801.jpg" alt="Membro usando camiseta off-white em ambiente urbano" loading="lazy" />
+        </div>
+
+        <div class="gallery__item reveal reveal-delay-3">
+          <img src="assets/images/20260307_181208.jpg" alt="Membro de costas exibindo a estampa da camiseta preta" loading="lazy" />
+        </div>
+
+        <!-- Célula wide 2×1 -->
+        <div class="gallery__item reveal reveal-delay-2">
+          <img src="assets/images/20260307_181211.jpg" alt="Detalhe da estampa MUNDO na camiseta preta" loading="lazy" />
+        </div>
+
+        <div class="gallery__item reveal reveal-delay-3">
+          <img src="assets/images/20260307_180833.jpg" alt="Membro com camiseta off-white de costas em pose editorial" loading="lazy" />
+        </div>
+
+        <div class="gallery__item reveal reveal-delay-4">
+          <img src="assets/images/20260307_180837.jpg" alt="Membro com camiseta off-white exibindo a estampa ao ar livre" loading="lazy" />
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         PROPÓSITO
+         ============================================================ -->
+    <section id="proposito" class="proposito" aria-labelledby="proposito-titulo">
+      <div class="container">
+        <div class="proposito__grid">
+
+          <!-- Imagens -->
+          <div class="proposito__images reveal">
+            <div class="proposito__img-main">
+              <img
+                src="assets/images/20260307_180209.jpg"
+                alt="Membro do Ministério de costas exibindo a estampa IDE POR TODO O MUNDO na camiseta off-white"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="proposito__img-secondary">
+              <img
+                src="assets/images/20260307_181348(0).jpg"
+                alt="Detalhe da estampa na camiseta preta do Ministério de Comunicação"
+                loading="lazy"
+              />
+            </div>
+
+            <!-- Elemento decorativo geométrico -->
+            <div class="proposito__deco" aria-hidden="true"></div>
+          </div>
+
+          <!-- Conteúdo -->
+          <div class="proposito__content reveal reveal-delay-2">
+            <div class="proposito__eyebrow">
+              <span class="proposito__eyebrow-dot" aria-hidden="true"></span>
+              <span class="proposito__eyebrow-text">Por que essa camiseta?</span>
+            </div>
+
+            <h2 id="proposito-titulo" class="proposito__title">
+              A MENSAGEM<br>
+              PRECISA SER<br>
+              OUVIDA
+            </h2>
+
+            <p class="proposito__text">
+              Adquirir essa camiseta é mais do que levar uma peça de roupa — é representar
+              pessoas que acreditam que a comunicação pode levar mensagens mais longe.
+            </p>
+
+            <p class="proposito__text">
+              Você também contribui para fortalecer o Ministério de Comunicação e ajuda
+              o Evangelho a alcançar mais vidas através de cada detalhe bem comunicado.
+            </p>
+
+            <div class="proposito__cta">
+              <a href="#ofertas" class="btn btn--primary">Ver camisetas</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         OFERTAS
+         ============================================================ -->
+    <section id="ofertas" class="ofertas" aria-labelledby="ofertas-titulo">
+      <div class="container">
+
+        <div class="section-header reveal">
+          <span class="section-header__eyebrow">Escolha a sua</span>
+          <h2 id="ofertas-titulo" class="section-header__title">
+            ESCOLHA A MELHOR<br>OPÇÃO PRA VOCÊ
+          </h2>
+          <p class="section-header__subtitle">Cada camiseta por R$ 74,90 no Pix</p>
+        </div>
+
+        <div class="ofertas__grid">
+
+          <!-- Card 1 — Individual -->
+          <article class="product-card reveal" aria-label="Leve 1 — Camiseta IAP individual">
+            <div class="product-card__image">
+              <img
+                src="assets/images/20260307_180825.jpg"
+                alt="Camiseta IAP off-white — costas com estampa IDE POR TODO O MUNDO"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="product-card__body">
+              <p class="product-card__name">Leve 1 — Camiseta IAP</p>
+
+              <p class="product-card__price-sub">No cartão (até 3x sem juros)</p>
+              <p class="product-card__price-original">R$ 79,90</p>
+
+              <p class="product-card__price-main">R$ 74,90</p>
+              <p class="product-card__price-sub">à vista no Pix</p>
+              <span class="product-card__discount">6% de desconto no Pix</span>
+
+              <div class="product-card__cta">
+                <a href="#reserva" class="btn btn--primary btn--full">
+                  Comprar Agora
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2 — Kit (destaque) -->
+          <article class="product-card product-card--featured reveal reveal-delay-2" aria-label="Leve 2 — Kit promoção 2 camisetas">
+            <div class="product-card__badge">
+              <span class="badge badge--accent">Melhor Oferta</span>
+            </div>
+
+            <div class="product-card__image">
+              <img
+                src="assets/images/Carol%20costas.jpg"
+                alt="Camiseta IAP preta — costas com estampa IDE POR TODO O MUNDO"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="product-card__body">
+              <p class="product-card__name">Leve 2 — Promoção Especial</p>
+
+              <p class="product-card__price-sub">2 camisetas por apenas</p>
+              <p class="product-card__price-original">de R$ 159,80</p>
+
+              <p class="product-card__price-main">R$ 139,90</p>
+              <p class="product-card__price-sub">no Pix · R$ 69,95 cada</p>
+              <span class="product-card__discount">Economia de R$ 19,90</span>
+
+              <div class="product-card__cta">
+                <a href="#reserva" class="btn btn--accent btn--full">
+                  Aproveitar Kit
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <p class="ofertas__note reveal">
+          * Preço no cartão: R$ 79,90. Desconto de 6% válido apenas no Pix.
+          Parcelado com acréscimo de 7%. Formas de pagamento confirmadas via WhatsApp.
+        </p>
+
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         FORMULÁRIO DE RESERVA
+         ============================================================ -->
+    <section id="reserva" class="formulario" aria-labelledby="form-titulo">
+      <div class="container">
+
+        <div class="formulario__card reveal">
+
+          <!-- Header do card -->
+          <div class="formulario__header">
+            <p class="formulario__header-eyebrow">Faça sua reserva</p>
+            <h2 id="form-titulo" class="formulario__header-title">
+              RESERVE SUA CAMISETA
+            </h2>
+            <p class="formulario__header-sub">
+              R$ 74,90 no Pix &nbsp;·&nbsp; R$ 79,90 no crédito (até 3x sem juros)
+              &nbsp;·&nbsp; Kit com 2 por R$ 139,90 no Pix
+            </p>
+          </div>
+
+          <!-- Formulário -->
+          <div class="formulario__body">
+            <form id="reservaForm" class="formulario__form" novalidate>
+
+              <!-- Nome + WhatsApp -->
+              <div class="formulario__row">
+                <div class="form-group">
+                  <label class="label" for="campo-nome">Nome completo *</label>
+                  <input
+                    id="campo-nome"
+                    class="form-input"
+                    type="text"
+                    name="nome"
+                    placeholder="Como podemos te chamar?"
+                    required
+                    autocomplete="name"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label class="label" for="campo-whatsapp">WhatsApp *</label>
+                  <input
+                    id="campo-whatsapp"
+                    class="form-input"
+                    type="tel"
+                    name="whatsapp"
+                    placeholder="(00) 00000-0000"
+                    required
+                    autocomplete="tel"
+                    inputmode="tel"
+                  />
+                </div>
+              </div>
+
+              <!-- Produto + Tamanho -->
+              <div class="formulario__row">
+                <div class="form-group">
+                  <label class="label" for="campo-produto">Produto *</label>
+                  <select id="campo-produto" class="form-select" name="produto" required>
+                    <option value="">Selecione...</option>
+                    <option value="Camiseta Preta">Camiseta Preta</option>
+                    <option value="Camiseta Off-White">Camiseta Off-White</option>
+                    <option value="Promoção Especial (2 Peças)">Promoção Especial (2 Peças)</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label class="label" for="campo-tamanho">Tamanho *</label>
+                  <select id="campo-tamanho" class="form-select" name="tamanho" required>
+                    <option value="">Selecione...</option>
+                    <option value="PP">PP</option>
+                    <option value="P">P</option>
+                    <option value="M">M</option>
+                    <option value="G">G</option>
+                    <option value="GG">GG</option>
+                    <option value="XGG">XGG</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Quantidade -->
+              <div class="form-group">
+                <label class="label">Quantidade *</label>
+                <div class="number-input-wrapper">
+                  <button
+                    type="button"
+                    class="number-btn"
+                    data-action="minus"
+                    aria-label="Diminuir quantidade"
+                  >−</button>
+                  <input
+                    id="campo-quantidade"
+                    class="number-input"
+                    type="number"
+                    name="quantidade"
+                    value="1"
+                    min="1"
+                    max="99"
+                    readonly
+                    aria-label="Quantidade de camisetas"
+                  />
+                  <button
+                    type="button"
+                    class="number-btn"
+                    data-action="plus"
+                    aria-label="Aumentar quantidade"
+                  >+</button>
+                </div>
+              </div>
+
+              <!-- Pagamento -->
+              <div class="form-group">
+                <label class="label">Forma de pagamento *</label>
+                <div class="radio-group" role="radiogroup" aria-label="Forma de pagamento">
+
+                  <div class="radio-option">
+                    <input
+                      id="pag-pix"
+                      type="radio"
+                      name="pagamento"
+                      value="Pix"
+                      checked
+                    />
+                    <label class="radio-option__label" for="pag-pix">
+                      <!-- Ícone Pix inline SVG -->
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                      Pix (6% desconto)
+                    </label>
+                  </div>
+
+                  <div class="radio-option">
+                    <input
+                      id="pag-cartao"
+                      type="radio"
+                      name="pagamento"
+                      value="Crédito (até 3x sem juros)"
+                    />
+                    <label class="radio-option__label" for="pag-cartao">
+                      <!-- Ícone cartão inline SVG -->
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+                      Crédito (3x s/ juros)
+                    </label>
+                  </div>
+
+                </div>
+              </div>
+
+              <!-- Observações -->
+              <div class="form-group">
+                <label class="label" for="campo-obs">Observações</label>
+                <textarea
+                  id="campo-obs"
+                  class="form-textarea"
+                  name="observacoes"
+                  placeholder="Algum detalhe específico? Ex: tamanhos diferentes no kit..."
+                  rows="3"
+                ></textarea>
+              </div>
+
+              <!-- Resumo do pedido -->
+              <div class="order-summary" aria-live="polite" aria-label="Resumo do pedido">
+                <p class="order-summary__title">Resumo do Pedido</p>
+
+                <div class="order-summary__row">
+                  <span>Quantidade</span>
+                  <span id="summary-qtd">1 peça</span>
+                </div>
+
+                <div class="order-summary__row">
+                  <span>Pagamento</span>
+                  <span id="summary-pagamento">Pix (6% de desconto)</span>
+                </div>
+
+                <div class="order-summary__row">
+                  <span>Desconto</span>
+                  <span id="summary-desconto">Desconto aplicado</span>
+                </div>
+
+                <div class="order-summary__row order-summary__row--total">
+                  <span>Total estimado</span>
+                  <span id="summary-total" class="order-summary__total-value">R$ 74,90</span>
+                </div>
+              </div>
+
+              <!-- Botão submit -->
+              <div class="formulario__submit">
+                <button type="submit" class="btn btn--primary btn--full btn--lg">
+                  <!-- Ícone WhatsApp SVG -->
+                  <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                  </svg>
+                  Finalizar no WhatsApp
+                </button>
+              </div>
+
+              <!-- Nota pós-submit -->
+              <p class="formulario__note">
+                Sua reserva será confirmada pela nossa equipe via WhatsApp.
+                O pagamento é feito no momento da retirada ou entrega combinada.
+              </p>
+
+            </form>
+          </div><!-- /.formulario__body -->
+
+        </div><!-- /.formulario__card -->
+
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         FAQ
+         ============================================================ -->
+    <section id="faq" class="faq" aria-labelledby="faq-titulo">
+      <div class="container">
+
+        <div class="section-header reveal">
+          <span class="section-header__eyebrow">Tire suas dúvidas</span>
+          <h2 id="faq-titulo" class="section-header__title">Perguntas Frequentes</h2>
+        </div>
+
+        <div class="faq__list reveal">
+
+          <div class="accordion-item">
+            <button
+              class="accordion-trigger"
+              aria-expanded="false"
+              aria-controls="faq-1-content"
+              id="faq-1-btn"
+            >
+              <span class="accordion-trigger__text">
+                Qual a diferença entre a camiseta preta e a off-white?
+              </span>
+              <span class="accordion-trigger__icon" aria-hidden="true"></span>
+            </button>
+            <div
+              id="faq-1-content"
+              class="accordion-content"
+              role="region"
+              aria-labelledby="faq-1-btn"
+            >
+              <div class="accordion-content__inner">
+                As duas são do mesmo modelo e possuem a estampa do Ministério de Comunicação da IAP Barreirinha. A diferença é apenas a cor da peça: a preta tem visual mais urbano e impactante, enquanto a off-white transmite um estilo mais clean e versátil. O material, corte e qualidade são idênticos.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button
+              class="accordion-trigger"
+              aria-expanded="false"
+              aria-controls="faq-2-content"
+              id="faq-2-btn"
+            >
+              <span class="accordion-trigger__text">
+                Quais tamanhos estarão disponíveis?
+              </span>
+              <span class="accordion-trigger__icon" aria-hidden="true"></span>
+            </button>
+            <div
+              id="faq-2-content"
+              class="accordion-content"
+              role="region"
+              aria-labelledby="faq-2-btn"
+            >
+              <div class="accordion-content__inner">
+                As camisetas estarão disponíveis nos tamanhos PP, P, M, G, GG e XGG. Por ser uma produção em lote, recomendamos realizar a reserva com antecedência para garantir seu tamanho, pois os estoques são limitados.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button
+              class="accordion-trigger"
+              aria-expanded="false"
+              aria-controls="faq-3-content"
+              id="faq-3-btn"
+            >
+              <span class="accordion-trigger__text">
+                O pagamento é feito no site?
+              </span>
+              <span class="accordion-trigger__icon" aria-hidden="true"></span>
+            </button>
+            <div
+              id="faq-3-content"
+              class="accordion-content"
+              role="region"
+              aria-labelledby="faq-3-btn"
+            >
+              <div class="accordion-content__inner">
+                Não. O site é apenas para reserva. Ao preencher o formulário, você será direcionado para o WhatsApp da nossa equipe, que confirmará os detalhes do pedido. O pagamento é realizado no momento da retirada ou entrega combinada com você.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button
+              class="accordion-trigger"
+              aria-expanded="false"
+              aria-controls="faq-4-content"
+              id="faq-4-btn"
+            >
+              <span class="accordion-trigger__text">
+                Como funciona a opção parcelada?
+              </span>
+              <span class="accordion-trigger__icon" aria-hidden="true"></span>
+            </button>
+            <div
+              id="faq-4-content"
+              class="accordion-content"
+              role="region"
+              aria-labelledby="faq-4-btn"
+            >
+              <div class="accordion-content__inner">
+                Ao selecionar o pagamento no cartão de crédito, o valor é de R$ 79,90 em até 3x sem juros. Nossa equipe entrará em contato via WhatsApp para combinar os detalhes do parcelamento. O Pix tem desconto de 6%, sendo a opção mais vantajosa.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button
+              class="accordion-trigger"
+              aria-expanded="false"
+              aria-controls="faq-5-content"
+              id="faq-5-btn"
+            >
+              <span class="accordion-trigger__text">
+                Posso pedir tamanhos diferentes no kit de 2 camisetas?
+              </span>
+              <span class="accordion-trigger__icon" aria-hidden="true"></span>
+            </button>
+            <div
+              id="faq-5-content"
+              class="accordion-content"
+              role="region"
+              aria-labelledby="faq-5-btn"
+            >
+              <div class="accordion-content__inner">
+                Sim! Na promoção especial (kit 2 peças) você pode escolher tamanhos e cores diferentes. Basta mencionar os detalhes no campo de observações do formulário, ou informar ao nosso time via WhatsApp após a reserva.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button
+              class="accordion-trigger"
+              aria-expanded="false"
+              aria-controls="faq-6-content"
+              id="faq-6-btn"
+            >
+              <span class="accordion-trigger__text">
+                Como funciona a entrega?
+              </span>
+              <span class="accordion-trigger__icon" aria-hidden="true"></span>
+            </button>
+            <div
+              id="faq-6-content"
+              class="accordion-content"
+              role="region"
+              aria-labelledby="faq-6-btn"
+            >
+              <div class="accordion-content__inner">
+                A entrega ou retirada será combinada diretamente com a nossa equipe via WhatsApp após a confirmação da reserva. Trabalhamos com retirada presencial na sede da IAP Barreirinha, e a entrega local pode ser combinada caso necessário.
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /.faq__list -->
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__inner">
+
+        <div class="footer__logo">
+          <span class="footer__logo-main">IAP Camisetas</span>
+          <span class="footer__logo-sub">Ministério de Comunicação</span>
+        </div>
+
+        <div class="footer__divider" aria-hidden="true"></div>
+
+        <p class="footer__copy">
+          © 2026 IAP Barreirinha. Ministério de Comunicação.<br>
+          Comunicar é missão.
+        </p>
+
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- GSAP CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <!-- Scripts do site -->
+  <script src="scripts/animations.js"></script>
+  <script src="scripts/form.js" defer></script>
+  <script src="scripts/main.js" defer></script>
+
+</body>
+</html>
