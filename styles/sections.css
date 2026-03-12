@@ -6,34 +6,36 @@
    INTRO OVERLAY — 100% CSS @keyframes
    ========================================= */
 
-/* Keyframes ──────────────────────────────── */
+/* --- Keyframes --- */
+
 @keyframes iap-line-draw {
   from { transform: scaleX(0); }
   to   { transform: scaleX(1); }
 }
 
-@keyframes iap-slide-up {
-  from { transform: translateY(110%); }
-  to   { transform: translateY(0); }
-}
-
-@keyframes iap-fade-up {
-  from { opacity: 0; transform: translateY(80%); }
+@keyframes iap-word-in {
+  from { opacity: 0; transform: translateY(22px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 
-@keyframes iap-fade-in {
-  from { opacity: 0; transform: translateY(14px); }
-  to   { opacity: 1; transform: translateY(0); }
+@keyframes iap-mundo-in {
+  0%   { opacity: 0; transform: translateY(40px) scale(0.94); }
+  60%  { opacity: 1; }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
 }
 
-/* Cortina sobe — dispara aos 4s, dura 0.9s */
+@keyframes iap-ref-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Cortina sobe revelando o site (dispara aos 4s) */
 @keyframes intro-curtain-up {
-  from { transform: translateY(0); }
+  from { transform: translateY(0%); }
   to   { transform: translateY(-100%); }
 }
 
-/* Container ────────────────────────────── */
+/* --- Container --- */
 #intro-overlay {
   position: fixed;
   inset: 0;
@@ -43,96 +45,101 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-
-  /* Slide-up disparado aos 4s */
-  animation: intro-curtain-up 0.9s cubic-bezier(0.87, 0, 0.13, 1) 4s forwards;
+  animation: intro-curtain-up 0.9s cubic-bezier(0.87, 0, 0.13, 1) 4s both;
 }
 
 .intro-inner {
-  position: relative;
-  z-index: 1;
   text-align: center;
-  padding: 0 var(--gutter);
+  padding: 0 clamp(16px, 4vw, 48px);
   width: 100%;
   max-width: 900px;
 }
 
-/* Linha vermelha ───────────────────────── */
+/* --- Linha vermelha --- */
 .intro-line-wrap {
-  margin-bottom: 28px;
+  margin-bottom: 32px;
   display: flex;
   justify-content: center;
 }
 
 #intro-line {
-  width: 72px;
-  height: 2.5px;
+  width: 64px;
+  height: 2px;
   background: #C8102E;
   border-radius: 2px;
+  transform-origin: center center;
+
+  /* estado inicial */
   transform: scaleX(0);
-  transform-origin: center;
-  /* Anima: começa em 0.3s, dura 0.7s */
-  animation: iap-line-draw 0.7s cubic-bezier(0.65, 0, 0.35, 1) 0.3s forwards;
+
+  /* anima: delay 0.3s, duração 0.65s */
+  animation: iap-line-draw 0.65s cubic-bezier(0.65, 0, 0.35, 1) 0.3s forwards;
 }
 
-/* Textos ───────────────────────────────── */
+/* --- Textos --- */
 .intro-text {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 4px;
 }
 
-/* Cada wrap tem overflow:hidden — cria o efeito de "sair por baixo" */
 .intro-word-wrap {
-  overflow: hidden;
   display: block;
-  line-height: 1;
 }
 
 #intro-small {
   display: block;
   font-family: 'Bebas Neue', sans-serif;
-  font-size: clamp(20px, 4vw, 42px);
-  color: rgba(255, 255, 255, 0.55);
-  letter-spacing: 0.12em;
+  font-size: clamp(18px, 3.5vw, 40px);
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  margin-bottom: 6px;
-  transform: translateY(110%);
-  /* Anima: começa em 1s, dura 0.65s */
-  animation: iap-slide-up 0.65s cubic-bezier(0.33, 1, 0.68, 1) 1.0s forwards;
+
+  /* estado inicial */
+  opacity: 0;
+  transform: translateY(22px);
+
+  /* anima: delay 1.0s, duração 0.55s */
+  animation: iap-word-in 0.55s ease-out 1.0s both;
 }
 
 #intro-large {
   display: block;
   font-family: 'Bebas Neue', sans-serif;
-  font-size: clamp(80px, 19vw, 210px);
+  font-size: clamp(80px, 18vw, 200px);
   color: #FFFFFF;
   letter-spacing: 0.01em;
   text-transform: uppercase;
-  line-height: 0.82;
+  line-height: 0.85;
+
+  /* estado inicial */
   opacity: 0;
-  transform: translateY(70%);
-  /* Anima: começa em 1.45s, dura 0.75s */
-  animation: iap-fade-up 0.75s cubic-bezier(0.33, 1, 0.68, 1) 1.45s forwards;
+  transform: translateY(40px) scale(0.94);
+
+  /* anima: delay 1.45s, duração 0.8s */
+  animation: iap-mundo-in 0.8s cubic-bezier(0.34, 1.4, 0.64, 1) 1.45s both;
 }
 
-/* Referência ───────────────────────────── */
+/* --- Versículo --- */
 .intro-ref-wrap {
-  margin-top: 20px;
+  margin-top: 24px;
 }
 
 #intro-ref {
   display: inline-block;
   font-family: 'Inter', sans-serif;
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 0.22em;
-  color: rgba(255, 255, 255, 0.28);
+  letter-spacing: 0.24em;
+  color: rgba(255, 255, 255, 0.25);
+
+  /* estado inicial */
   opacity: 0;
-  transform: translateY(14px);
-  /* Anima: começa em 2.2s, dura 0.5s */
-  animation: iap-fade-in 0.5s ease-out 2.2s forwards;
+
+  /* anima: delay 2.2s, duração 0.6s */
+  animation: iap-ref-in 0.6s ease-out 2.2s both;
 }
 
 /* =========================================
